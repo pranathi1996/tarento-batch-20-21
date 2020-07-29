@@ -1,0 +1,27 @@
+# Read an array of words as user input (do not hardcode input) and 
+# print all 2 word combinations possible without any duplications
+
+#include<stdio.h>
+int factorial(int a);
+
+int main(){
+ int n,i;
+ char a[50][50];
+ printf("Enter the elements:");
+ scanf("%d",&n);
+ printf("Enter the elements:");
+ for(i=0;i<n;i++){
+     scanf("%s",a[i]);
+ }
+ int f=factorial(n);
+return 0;
+}
+
+int factorial(int a){
+    int fact=1;
+    while(a>0){
+      fact*=a;
+      a--;
+    }
+    return fact;
+}

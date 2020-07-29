@@ -1,0 +1,37 @@
+#  Accept a String input
+# - Print the number of opening braces and closing braces in the input String
+# - Verify if every opening brace has an equivalent closing brace. Print well formed if every opening brace has an equivalent closing brace.
+# Print invalid if every opening brace does not have an equivalent closing brace
+
+#include<stdio.h>
+
+int main(){
+ int len,i,open=0,close=0;
+ char string[100];
+ #Read the stirng
+ printf("Enter the string:");
+ scanf("%[^\n]", &string);
+
+ while(string[i] != '\0'){
+ #counting the opening braces
+  if(string[i]=='{'){
+   open++;
+  }
+ #counting the closing braces
+  else if(string[i]=='}'){
+   close++;
+  }
+   i++;
+ }
+ 
+ #checking the condition
+ if(open==close){
+  printf("Opening braces-%d",open);
+  printf(",Closing braces-%d",close);
+ }
+ else{
+     printf("Invalid");
+ }
+ }
+return 0;
+}
